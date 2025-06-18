@@ -7,91 +7,91 @@
 </head>
 <body>
     <script>
-        //fungsi untuk melakukan operasi penjumlahan
-        function tambah (angka1, angka2) {
-        return angka1 + angka2;
-        }  
-
-        //fungsi untuk melakukan operasi pengurangan 
-        function kurang(angka1, angka2) {
-        return angka1 - angka2;
+        // Fungsi untuk melakukan operasi pejumlahan
+        function tambah(angka1, angka2) {
+            return angka1 + angka2;
         }
 
-        // fungsi untuk melakukan operasi perkalian 
-        function kali(angka1, angka2 ) {
+        // Fungsi untuk melakukan operasi pengurangan
+        function kurang(angka1, angka2) {
+            return angka1 - angka2;
+        }
+
+        // Fungsi untuk melakukan operasi perkalian
+        function kali(angka1, angka2) {
             return angka1 * angka2;
         }
 
-        //fungsi untuk melakukan operasi pembagian
+        // Fungsi untuk melakukan operasi pembagian 
         function bagi(angka1, angka2) {
-        //memastikan tidak terjadi pembagian dengan nol
-        if (angka2 === 0) {
-            return "Error! tidak dapat melakukan pembagian dengan nol.";
+            // Memastikan tidak terjadi pembagian dengan nol
+            if (angka2 === 0) {
+                return "Error! Tidak dapat melakukan pembagian dengan nol.";
+            }
+            return angka1 / angka2;
         }
-        return angka1 /angka2;
-        }
-
-        //fungsi utama kalkulator 
-        function kalkulatorsederhana() {
-        //meminta input angka pertama dari pengguna 
-        const angka1string = prompt("masukkan angka pertama:");
-        //mengubah input string menjadi angka (float untuk desimal)
-        const angka1 = parseFloat(angka1string);
         
-        // memeriksa apakah input angka pertama valid
-        if  (isNaN(angka1)) {
-            alert("input angka pertama tidak valid!");
-            return; // menghentikan fungsi jika input tidak valid
+        // Fungsi utama kalkulator
+        function kalkulatorSederhana() {
+            // Meminta input angka pertama dari pengguna
+            const angka1String = prompt("Masukan angka pertama:");
+            // Mengubah input string menjadi angka (float untuk desimal)
+            const angka1 = parseFloat(angka1String);
+        }
+        // Memeriksa apakah input angka pertama valid
+        if (isNaN(angka1)) {
+            alert("Input angka pertama tidak valid!");
+            retrun; // Menghentikan fungsi jika input tidak valid
         }
 
-        // meminta input operator dari pengguna
-        const operator = prompt("pilih operator (+, -, *, /):");
+        // Meminta input operator dari pengguna
+        const operator = prompt("Pilih operator(+, -, *, /):");
 
-        //meminta apakah operator yang dimasukkan valid
-        if (operator !== "+" && operator !== "-" && operator !== "*" && operator !== "/") {
-            alert("operator tidak valid!");
-            return; // menghentikan fungsi jika tidak valid
-        } 
+        // Memeriksa apakah operatur yang dimasukkan valid
+        if (operator !== "+" && operator !== "-" && operator !== "*" && operator !== "/");{
+            alert("Operator tidak valid!");
+            return; // Menghentikan fungsi jika operator tidak valid
+        }
 
-        // meminta input angka dari pengguna
-        const angka2string = prompt("masukkan angka kedua:");
-        // mengubah input string menjadi angka (float untuk desimal)
-        const angka2 = parseFloat(angka2string);
+        // Meminta input angka kedua dari pengguna
+        const angka2String = promt("Masukkan angka kedua:");
+        // Mengubah input string menjadi angka (float untuk desimal)
+        const angka2 = parseFloat(angka2String);
 
-        //memeriksa apakah input angka kedua valid
-         if (isNaN(angka2)) {
-            alert("input angka ke dua tidak valid!");
-            return; //menghentikan fungsi jika input tidak valid
-         }
+        // Memeriksa apakah input angka kedua valid 
+        if (isNaN(angka2)){
+            alert("Input angka kedua tidak valid!");
+            return; // Menghentikan fungsi jika input tidak valid
+        }
 
-         let hasil; // variabel untuk menyiapkan hasil perhitungan
+        let hasil; // Variabel untuk menyimpan hasil perhitungan 
 
-         //melakukan operasi berdasarkan operator yang di pilih
-         switch (operator) {
+        // Melakukan operasi berdasakan operator yang dipilih 
+        switch (operator) {
             case "+":
-            hasil = tambah(angka1, angka2);
-            break;
-            case "-":
-            hasil = kurang(angka1, angka2);
-            break;
-            case "*":
-            hasil = kali(angka1, angka2);
-            break;
-            case "/":
-            hasil = bagi(angka1, angka2);
-            break;
+                hasil = tambah(angka1, angka2);
+                break;
+                case "-":
+                    hasil = kurang(angka1, angka2);
+                    break;
+                    case "*":
+                        hasil = kali(angka1, angka2);
+                        break;
+                        case "/":
+                            hasil = bagi(angka1, angka2);
+                            break;
          }
 
-         // menampilkan hsil perhitungan kepada pengguna
-         alert(`hasil dari ${angka1} ${operator} ${angka2} adalah: ${hasil}`);
-        }
+         // Menampilkan hasil perhitungan kepada pengguna
+         alert(`Hasil dari ${angka1} ${operator} ${angka2} adalah: ${hasil}`); {
+         }
 
-        // memanggil fungsi kalkulatorsederhana untuk menjalankan kalkulator
-        kalkulatorsederhana();
+         // Memanggil fungsi kalkuratorSederhana untuk menjalankan kalkulator
+         kalkulatorSederhana();
 
 
-        let mobil = ["toyota", "honda", "suzuki"];
-        console.log(mobil.length); // output: # (ada 3 mobil dalam array)
-    </script>
+let mobil = ["Toyota", "Honda", "Suzuki"];
+console.log(mobil.length); // Output: 3 (ada 3 mobil dalam array)
+         </script>
 </body>
 </html>
